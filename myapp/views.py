@@ -59,7 +59,8 @@ def entry(request):
     response.set_cookie("name","Manoj")
     response.set_cookie("city",)
     # response.set_cookie("","Pravin")
-    # response.set_cookie("",)
+    # response.set_cookie("","")
+    # response.set_cookie(value=1)
     return response
 
 
