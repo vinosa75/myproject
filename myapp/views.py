@@ -58,7 +58,7 @@ def entry(request):
     response = render(request, 'entry.html')
     response.set_cookie("name","Manoj")
     response.set_cookie("city",)
-    response.set_cookie("","Pravin")
+    # response.set_cookie("","Pravin")
     # response.set_cookie("",)
     return response
 
