@@ -55,10 +55,17 @@ def dashboard(request):
 @csrf_protect
 @login_required(login_url='login')
 def entry(request):
-    return render(request, 'entry.html', {})
+    response = render(request, 'entry.html')
+    response.set_cookie("name","Manoj")
+    # response.set_cookie("","Pravin")
+    response.set_cookie("city","")
+    # response.set_cookie("","")
+    return response
 
 
 def load_charts(request):
+
+    # response.set_cookie('logged_in_status', 'never_use_this_ever') 
     print("Manoj")
     print(request.POST)
 
@@ -145,6 +152,7 @@ def load_charts(request):
 
     # Driver Code
     lst = Reverse(lst)
+    response = render(request, 'hello_world.html', {'lst': lst,'EntryPrice':EntryPrice,'StrikePrice':StrikePrice } )
 
-    return render(request, 'hello_world.html', {'lst': lst,'EntryPrice':EntryPrice,'StrikePrice':StrikePrice } )
+    return response
 
