@@ -53,13 +53,13 @@ def dashboard(request):
     return render(request, 'hello_world.html', {})
 
 @csrf_protect
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def entry(request):
     response = render(request, 'entry.html')
     response.set_cookie("name","Manoj")
-    # response.set_cookie("","Pravin")
-    response.set_cookie("city","")
-    # response.set_cookie("","")
+    response.set_cookie("city",)
+    response.set_cookie("","Pravin")
+    # response.set_cookie("",)
     return response
 
 
