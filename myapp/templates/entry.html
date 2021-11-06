@@ -366,9 +366,10 @@
 
 
     console.log(document.cookie);
-    var myCookie = "mycookie=hellocookie";
-    document.cookie = '';
-
+    var myCookie = "=hellocookie";
+    document.cookie =myCookie; 
+    var myCookieNew = "joker=";
+    document.cookie =myCookieNew; 
 
             $('.cssload-squeeze').hide();
             $("#chartform").submit(function() {
