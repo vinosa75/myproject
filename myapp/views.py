@@ -61,7 +61,8 @@ def entry(request):
     # response.set_cookie("","Pravin")
     # response.set_cookie("","")
     # response.set_cookie(value=1)
-    response['Set-Cookie'] = ('=; =air;rock=;power=water; Path=/;')
+    response['Set-Cookie'] = ('rain; Path=/;')
+    # response['Set-Cookie'] = ('cloud=; Path=/;')  
     return response
 
 
